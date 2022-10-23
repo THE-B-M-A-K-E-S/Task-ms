@@ -30,4 +30,8 @@ public class TaskService {
     public void delete(String id) {
         taskRepository.deleteById(id);
     }
+
+    public List<Task> findAllByProjectId(String projectId) {
+        return taskRepository.findAllByProjectId(projectId);
+    }
 }

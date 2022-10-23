@@ -39,4 +39,9 @@ public class TaskController {
     public void delete(@PathVariable String id) {
         taskService.delete(id);
     }
+
+    @GetMapping("project/{id}")
+    public List<Task> findAllByProjectId(@PathVariable String id) {
+        return taskService.findAllByProjectId(id);
+    }
 }
