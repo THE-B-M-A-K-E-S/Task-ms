@@ -15,4 +15,19 @@ public class TaskService {
     public List<Task> findAll() {
         return taskRepository.findAll();
     }
+    public Task findById(String id) {
+        return taskRepository.findById(id).get();
+    }
+
+    public Task save(Task task) {
+        return taskRepository.save(task);
+    }
+
+    public Task update(Task task) {
+        return taskRepository.save(task);
+    }
+
+    public void delete(String id) {
+        taskRepository.deleteById(id);
+    }
 }
