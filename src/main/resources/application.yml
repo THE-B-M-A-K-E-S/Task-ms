@@ -1,5 +1,6 @@
 server:
   port: 8083
+  forward-headers-strategy: framework
 spring:
   application:
     name: task-ms
@@ -30,3 +31,7 @@ management:
   info:
     env:
       enabled: true
+
+springdoc:
+  swagger-ui:
+    path: /docs
